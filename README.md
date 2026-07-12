@@ -2,6 +2,10 @@
 
 A lightweight, local genomic data analysis suite for processing raw sequencer files (FASTQ) and mapping personal genotyping records (23andMe) into an interactive health-impact dashboard.
 
+## 📊 Dashboard Preview
+
+![Genomic Report Dashboard Preview](results/genomic_dashboard_screenshot.jpg)
+
 ---
 
 ## 🧬 What this Project Does
