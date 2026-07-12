@@ -275,7 +275,7 @@ html_template = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorena Sandoval - Personal Genomic Health Report</title>
+    <title>Anonymous Patient - Personal Genomic Health Report</title>
     <meta name="description" content="Interactive visual report of personal genetic traits, methylation, cardiovascular risk, and dietary tolerances.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -881,7 +881,7 @@ html_template = """<!DOCTYPE html>
     <header>
         <div class="header-title-container">
             <div class="header-text">
-                <h1>Lorena Sandoval</h1>
+                <h1>Anonymous Patient</h1>
                 <p>Personal Genomic Health & Variant-Calling Analysis</p>
                 <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
                     <a href="https://github.com/fredLuv/fastq-genomic-pipeline" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.08); border: 1px solid var(--border-color); color: var(--text-primary); text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 0.8rem; font-weight: 500; transition: background 0.2s ease;">
