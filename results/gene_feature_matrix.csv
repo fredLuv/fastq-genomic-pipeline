@@ -1,0 +1,11 @@
+Gene_Symbol,rsID,Chromosome,Position_GRCh38,Consequence,Genotype,Risk_Allele,Risk_Allele_Count,Genotype_Status,Trait_Association,Clinical_Implications
+MTHFR,rs1801133,1,11796321,missense_variant,GG,T,0,Homozygous Wildtype,Folate metabolism (C677T),TT: ~16% folate conversion; CT: ~65%; CC: Typical
+MTHFR,rs1801131,1,11794419,missense_variant,GT,C,0,Homozygous Wildtype,Folate metabolism (A1298C),CC: Reduced folate conversion; AC: Mildly reduced
+APOE,rs429358,19,44908684,missense_variant,TT,C,0,Homozygous Wildtype,Alzheimer's risk (C112R),C allele determines APOE-epsilon4 (Increased Alzheimer's/lipid risk)
+APOE,rs7412,19,44908822,missense_variant,CC,T,0,Homozygous Wildtype,Alzheimer's risk (R158C),T allele determines APOE-epsilon2 (Reduced Alzheimer's risk)
+ALDH2,rs671,12,111803962,missense_variant,GG,A,0,Homozygous Wildtype,Alcohol flush reaction (Glu504Lys),AA: Severe flush/hangover; GA: Mild flush; GG: Normal tolerance
+ACTN3,rs1815739,11,66560624,stop_gained,TT,T,2,Homozygous Risk,Muscle performance (R577X),CC: Sprinters/Power athletes; CT: Intermediate; TT: Endurance athletes
+FTO,rs9939609,16,53786615,intron_variant,TT,A,0,Homozygous Wildtype,Weight and obesity risk,AA: Increased obesity risk; TA: Intermediate; TT: Typical risk
+LCT,rs4988235,2,135851076,intron_variant,GG,G,2,Homozygous Risk,Lactase persistence (Lactose tolerance),AA/AG: Lactose tolerant; GG: Lactose intolerant
+HFE,rs1800562,6,26092913,missense_variant,GG,A,0,Homozygous Wildtype,Hemochromatosis (C282Y),AA: High risk of iron overload; GA: Carrier; GG: Typical
+MC1R,rs1805007,16,89919709,missense_variant,CC,T,0,Homozygous Wildtype,Red hair & fair skin,TT: High probability of red hair; CT: Carrier; CC: Typical

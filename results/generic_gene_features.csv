@@ -1,0 +1,25 @@
+Gene_Symbol,Category,Chromosome,Total_SNPs_Measured,Genotyped_SNPs,Total_Risk_Alleles,Average_Risk_Score,SNP_Genotypes,Most_Severe_Consequences
+MTHFR,Methylation,1,2,2,0,0.0,rs1801133:GG; rs1801131:GT,missense_variant
+COMT,Methylation/Brain,22,1,1,0,0.0,rs4680:GG,missense_variant
+BDNF,Brain Health,11,1,1,0,0.0,rs6265:CC,missense_variant
+DRD2,Brain Health,11,1,1,1,0.5,rs1800497:AG,missense_variant
+MAOA,Brain Health,X,1,0,0,0.0,None,missense_variant
+APOE,Cardiovascular/Lipids,19,2,2,0,0.0,rs429358:TT; rs7412:CC,missense_variant
+NOS3,Cardiovascular,7,1,0,0,0.0,None,missense_variant
+FOXO3,Longevity,6,1,1,0,0.0,rs2802292:GT,intron_variant
+LCT,Dietary Tolerance,2,1,1,2,1.0,rs4988235:GG,intron_variant
+FTO,Metabolism,16,1,1,0,0.0,rs9939609:TT,intron_variant
+PPARG,Metabolism,3,1,1,1,0.5,rs1801282:CG,missense_variant
+CLOCK,Circadian Rhythm,4,1,1,0,0.0,rs1801260:AA,3_prime_UTR_variant
+HFE,Iron Metabolism,6,2,2,0,0.0,rs1800562:GG; rs1799945:CC,missense_variant
+VDR,Vitamin Absorption,12,1,1,0,0.0,rs731236:AA,synonymous_variant
+BCMO1,Vitamin Absorption,16,1,1,2,1.0,rs7501331:CC,missense_variant
+FUT2,Vitamin Absorption,19,1,1,1,0.5,rs602662:AG,missense_variant
+NBPF3,Vitamin Absorption,1,1,1,0,0.0,rs4654748:CC,intron_variant
+GSTP1,Detoxification,11,1,1,2,1.0,rs1695:GG,missense_variant
+SOD2,Antioxidant,6,1,1,0,0.0,rs4880:GG,missense_variant
+ALDH2,Detoxification,12,1,1,0,0.0,rs671:GG,missense_variant
+IL6,Inflammation,7,1,1,2,1.0,rs1800795:GG,5_prime_UTR_variant
+TNF,Inflammation,HSCHR6_MHC_SSTO_CTG1,1,1,1,0.5,rs1800629:AG,upstream_gene_variant
+ACTN3,Physical Traits,11,1,1,2,1.0,rs1815739:TT,stop_gained
+MC1R,Physical Traits,16,1,1,0,0.0,rs1805007:CC,missense_variant

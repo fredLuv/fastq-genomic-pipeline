@@ -1,0 +1,18 @@
+# Python and OS caches
+__pycache__/
+.DS_Store
+
+# Raw sequences and reference genomes
+reads/
+ref/
+
+# Bioinformatic intermediate outputs
+results/*.sam
+results/*.bam
+results/*.bai
+results/*.bcf
+results/*.vcf
+results/clean1.fastq
+results/clean2.fastq
+results/fastp_report.json
+results/ensembl_metadata_cache.json

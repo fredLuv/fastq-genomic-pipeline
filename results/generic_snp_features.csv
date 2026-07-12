@@ -1,0 +1,28 @@
+rsID,Gene_Symbol,Category,Chromosome,Position_GRCh38,Consequence,Genotype,Risk_Allele,Risk_Allele_Count,Genotype_Status,Trait_Association,Clinical_Implications
+rs1801133,MTHFR,Methylation,1,11796321,missense_variant,GG,T,0,Homozygous Wildtype,Folate metabolism (C677T),TT: ~16% folate conversion; CT: ~65%; CC: Typical
+rs1801131,MTHFR,Methylation,1,11794419,missense_variant,GT,C,0,Homozygous Wildtype,Folate metabolism (A1298C),CC: Reduced folate conversion; AC: Mildly reduced
+rs4680,COMT,Methylation/Brain,22,19963748,missense_variant,GG,A,0,Homozygous Wildtype,Dopamine clearance (Val158Met),AA (Met/Met): Slow dopamine breakdown ('Worrier'); GG (Val/Val): Fast breakdown ('Warrior'); AG: Intermediate
+rs6265,BDNF,Brain Health,11,27658369,missense_variant,CC,A,0,Homozygous Wildtype,Neuroplasticity (Val66Met),AA/AG: Met allele associated with lower BDNF secretion and memory/stress resilience variation
+rs1800497,DRD2,Brain Health,11,113400106,missense_variant,AG,A,1,Heterozygous Risk,Dopamine D2 Receptor (Taq1A),AA/AG: Reduced receptor density; associated with reward-seeking behavior and addiction susceptibility
+rs6318,MAOA,Brain Health,X,114731326,missense_variant,--,G,0,Not Genotyped,Monoamine oxidase A activity,G allele associated with altered serotonin/dopamine degradation rates
+rs429358,APOE,Cardiovascular/Lipids,19,44908684,missense_variant,TT,C,0,Homozygous Wildtype,Alzheimer's & lipid risk (C112R),C allele determines APOE-epsilon4 (Increased Alzheimer's & lipid risk)
+rs7412,APOE,Cardiovascular/Lipids,19,44908822,missense_variant,CC,T,0,Homozygous Wildtype,Alzheimer's & lipid risk (R158C),T allele determines APOE-epsilon2 (Reduced Alzheimer's risk)
+rs1799983,NOS3,Cardiovascular,7,150999023,missense_variant,--,T,0,Not Genotyped,Nitric Oxide Synthase (vasodilation),"TT/GT: Reduced nitric oxide production, associated with increased hypertension risk"
+rs2802292,FOXO3,Longevity,6,108587315,intron_variant,GT,C,0,Homozygous Wildtype,Healthy aging & longevity,"CC/CG: Associated with increased lifespan, protection against cardiovascular disease"
+rs4988235,LCT,Dietary Tolerance,2,135851076,intron_variant,GG,G,2,Homozygous Risk,Lactase persistence (Lactose tolerance),GG: Lactose intolerant; AA/AG: Lactose tolerant
+rs9939609,FTO,Metabolism,16,53786615,intron_variant,TT,A,0,Homozygous Wildtype,Weight and obesity risk,AA: Increased obesity risk and fat mass; TA: Intermediate; TT: Typical risk
+rs1801282,PPARG,Metabolism,3,12351626,missense_variant,CG,G,1,Heterozygous Risk,Insulin sensitivity & fat storage,GG/CG: Typical sensitivity; CC (Pro/Pro): Associated with higher BMI but lower diabetes risk
+rs1801260,CLOCK,Circadian Rhythm,4,55435202,3_prime_UTR_variant,AA,G,0,Homozygous Wildtype,Sleep duration & night owl tendency,GG/AG: Associated with evening chronotype ('night owl') and shorter sleep duration
+rs1800562,HFE,Iron Metabolism,6,26092913,missense_variant,GG,A,0,Homozygous Wildtype,Hemochromatosis (C282Y),AA: High risk of iron overload; GA: Carrier; GG: Typical
+rs1799945,HFE,Iron Metabolism,6,26090951,missense_variant,CC,G,0,Homozygous Wildtype,Hemochromatosis (H63D),GG: Moderate risk of iron overload; CG: Carrier; CC: Typical
+rs731236,VDR,Vitamin Absorption,12,47844974,synonymous_variant,AA,G,0,Homozygous Wildtype,Vitamin D Receptor (TaqI),GG (tt): Associated with reduced vitamin D absorption/bone density; AA: Normal
+rs7501331,BCMO1,Vitamin Absorption,16,81280891,missense_variant,CC,C,2,Homozygous Risk,Beta-carotene to Vitamin A conversion,CC/TC: Up to 57% reduction in conversion of plant-based beta-carotene to active Vitamin A
+rs602662,FUT2,Vitamin Absorption,19,48703728,missense_variant,AG,A,1,Heterozygous Risk,Vitamin B12 absorption,AA: Associated with lower B12 absorption and plasma levels; GG: Normal
+rs4654748,NBPF3,Vitamin Absorption,1,21459575,intron_variant,CC,T,0,Homozygous Wildtype,Vitamin B6 clearance rate,TT/CT: Associated with faster B6 clearance and lower plasma levels
+rs1695,GSTP1,Detoxification,11,67585218,missense_variant,GG,G,2,Homozygous Risk,Glutathione S-transferase (detox speed),GG: Reduced detoxification capacity for toxins/heavy metals; AG: Intermediate; AA: Normal
+rs4880,SOD2,Antioxidant,6,159692840,missense_variant,GG,T,0,Homozygous Wildtype,Superoxide dismutase (antioxidant defense),"TT: Reduced transport of SOD2 to mitochondria, associated with higher oxidative stress; CC: Normal"
+rs671,ALDH2,Detoxification,12,111803962,missense_variant,GG,A,0,Homozygous Wildtype,Alcohol flush reaction (Glu504Lys),AA: Severe flush/hangover; GA: Mild flush; GG: Normal tolerance
+rs1800795,IL6,Inflammation,7,22727026,5_prime_UTR_variant,GG,G,2,Homozygous Risk,Interleukin-6 systemic inflammation,GG/CG: Associated with higher baseline IL-6 levels and systemic inflammation
+rs1800629,TNF,Inflammation,HSCHR6_MHC_SSTO_CTG1,2874534,upstream_gene_variant,AG,A,1,Heterozygous Risk,Tumor Necrosis Factor (inflammatory response),"AA/GA: Higher baseline TNF-alpha, associated with increased inflammatory/autoimmune risk"
+rs1815739,ACTN3,Physical Traits,11,66560624,stop_gained,TT,T,2,Homozygous Risk,Muscle performance (R577X),CC: Sprinters/Power athletes; CT: Intermediate; TT: Endurance athletes
+rs1805007,MC1R,Physical Traits,16,89919709,missense_variant,CC,T,0,Homozygous Wildtype,Red hair & fair skin,TT: High probability of red hair; CT: Carrier; CC: Typical
