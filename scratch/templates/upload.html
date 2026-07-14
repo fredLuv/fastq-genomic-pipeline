@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genomic SaaS - Personal DNA Interpretation Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: rgba(30, 41, 59, 0.45);
+            --bg-card-hover: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.15);
+            --accent: #a5b4fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(165, 180, 252, 0.05) 0%, transparent 40%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #818cf8 0%, #c7d2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(16px);
+            border-radius: 1.5rem;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #a5b4fc);
+        }
+
+        .upload-zone {
+            border: 2px dashed rgba(99, 102, 241, 0.3);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            background: rgba(15, 23, 42, 0.4);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+            box-shadow: inset 0 0 12px rgba(99, 102, 241, 0.05);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: #818cf8;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .upload-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-subtext {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            box-shadow: none;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: none;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--text-muted);
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: .75em;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: .75em;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        /* Loading Screen */
+        .loading-container {
+            display: none;
+        }
+
+        .dna-spinner {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem auto;
+            position: relative;
+        }
+
+        .double-helix {
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: #6366f1;
+            border-bottom-color: #a5b4fc;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .loading-status {
+            font-size: 0.95rem;
+            color: #818cf8;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            min-height: 1.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #6366f1, #a5b4fc);
+            transition: width 0.4s ease;
+        }
+
+        footer {
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #818cf8;">
+                <path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5"></path>
+                <path d="M12 2v14.5"></path>
+                <path d="M16 6.5L8 10"></path>
+                <path d="M8 5.5l8 3.5"></path>
+                <path d="M16 11.5L8 15"></path>
+            </svg>
+            <span>NeoGen SaaS</span>
+        </div>
+        <p class="subtitle">Bilingual Genomic Health Interpretation & Variant-Calling Dashboard</p>
+
+        <!-- Upload Card -->
+        <div class="card" id="upload-card">
+            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+                    <div class="upload-icon">🧬</div>
+                    <div class="upload-text">Drag & drop your genotyping file</div>
+                    <div class="upload-subtext">Supports 23andMe format (.txt) up to 25MB</div>
+                    <button type="button" class="btn">Select File</button>
+                    <input type="file" name="file" id="file-input" accept=".txt">
+                </div>
+            </form>
+
+            <div class="divider">or</div>
+
+            <form action="/upload" method="post">
+                <input type="hidden" name="use_demo" value="true">
+                <button type="submit" class="btn btn-secondary" onclick="showLoading('Analyzing Demo Profile...')">
+                    Analyze Sample Profile (Sandoval v5)
+                </button>
+            </form>
+        </div>
+
+        <!-- Loading Card -->
+        <div class="card loading-container" id="loading-card">
+            <div class="dna-spinner">
+                <div class="double-helix"></div>
+            </div>
+            <div class="loading-title">Analyzing Genome</div>
+            <div class="loading-status" id="loading-status">Parsing raw genotyping file...</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <footer>
+            NEOGEN SAAS PLATFORM • CONFIDENTIAL & SECURE LOCAL INTERPRETATION
+        </footer>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const uploadForm = document.getElementById('upload-form');
+        const uploadCard = document.getElementById('upload-card');
+        const loadingCard = document.getElementById('loading-card');
+        const loadingStatus = document.getElementById('loading-status');
+        const progressFill = document.getElementById('progress-fill');
+
+        // Drag and drop handlers
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, e => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, e => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', e => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if (files.length) {
+                fileInput.files = files;
+                handleUpload();
+            }
+        }, false);
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length) {
+                handleUpload();
+            }
+        });
+
+        function handleUpload() {
+            showLoading('Uploading genotyping file...');
+            uploadForm.submit();
+        }
+
+        const statuses = [
+            { text: "Parsing raw 23andMe genotyping data...", progress: 20 },
+            { text: "Filtering 27 high-priority SNV target markers...", progress: 45 },
+            { text: "Consulting local Ensembl VEP annotation database cache...", progress: 70 },
+            { text: "Executing alignment & clinical risk algorithm...", progress: 85 },
+            { text: "Applying Chinese-English bilingual interpretations...", progress: 95 }
+        ];
+
+        function showLoading(initialText) {
+            uploadCard.style.display = 'none';
+            loadingCard.style.display = 'block';
+            loadingStatus.innerText = initialText;
+            progressFill.style.width = '5%';
+
+            let currentStep = 0;
+            const interval = setInterval(() => {
+                if (currentStep < statuses.length) {
+                    loadingStatus.innerText = statuses[currentStep].text;
+                    progressFill.style.width = statuses[currentStep].progress + '%';
+                    currentStep++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 600);
+        }
+    </script>
+</body>
+</html>
